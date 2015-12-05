@@ -3,7 +3,8 @@
   :url "https://github.com/spikymonkey/advent-of-code-2015"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
-  :dependencies [[org.clojure/clojure "1.7.0"]]
+  :dependencies [[org.clojure/clojure "1.7.0"]
+                 [digest "1.4.4"]]
   :main ^:skip-aot advent-of-code.core
   :target-path "target/%s"
   :profiles {:uberjar {:aot :all}})
