@@ -12,11 +12,11 @@
     "dvszwmarrgswjxmb" false))
 
 (deftest test-part-1
-  (= 2 (day-5/part-1 ["ugknbfddgicrmopn"
-        "aaa"
-        "jchzalrnumimnmhp"
-        "haegwjzuvuyypxyu"
-        "dvszwmarrgswjxmb"])))
+  (is (= 2 (day-5/part-1 ["ugknbfddgicrmopn"
+                          "aaa"
+                          "jchzalrnumimnmhp"
+                          "haegwjzuvuyypxyu"
+                          "dvszwmarrgswjxmb"]))))
 
 (deftest test-nice-part-2?
   (are [input nice?]
