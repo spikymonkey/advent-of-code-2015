@@ -38,3 +38,17 @@
                                "\"abc\"" \newline
                                "\"aaa\\\"aaa\"" \newline
                                "\"\\x27\"" \newline)))))
+
+(deftest test-encode
+  (are [input encoded]
+    (= encoded (day-8/chars-encoded input))
+    "\"\"", "\"\\\"\\\"\""
+    "\"abc\"", "\"\\\"abc\\\"\""
+    "\"aaa\\\"aaa\"", "\"\\\"aaa\\\\\\\"aaa\\\"\""
+    "\"\\x27\"", "\"\\\"\\\\x27\\\"\""))
+
+(deftest test-part-2
+  (is (= 19 (day-8/part-2 (str "\"\"" \newline
+                               "\"abc\"" \newline
+                               "\"aaa\\\"aaa\"" \newline
+                               "\"\\x27\"" \newline)))))
