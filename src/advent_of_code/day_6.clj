@@ -29,8 +29,8 @@
 
 (defn compute-lights-part-1
   [data]
-  (binding [*turn-on*  (fn [_  ] true)
-            *turn-off* (fn [_  ] false)
+  (binding [*turn-on*  (constantly true)
+            *turn-off* (constantly false)
             *toggle*   (fn [old] (not old))]
     (compute-lights data)))
 
