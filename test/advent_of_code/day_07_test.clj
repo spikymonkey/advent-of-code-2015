@@ -1,10 +1,10 @@
-(ns advent-of-code.day-7-test
-  (:require [advent-of-code.day-7 :as day-7]
+(ns advent-of-code.day-07-test
+  (:require [advent-of-code.day-07 :as day-07]
             [clojure.test :refer :all]))
 
 (deftest test-wires->values
   (are [input expected-output]
-    (= expected-output (day-7/wires->values input))
+    (= expected-output (day-07/wires->values input))
     "123 -> x
 456 -> y
 x AND y -> d

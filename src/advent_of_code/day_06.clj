@@ -1,4 +1,4 @@
-(ns advent-of-code.day-6
+(ns advent-of-code.day-06
   (:require [clojure.string :as str]
             [advent-of-code.io :refer [load-data]])
   (:import (java.awt.image BufferedImage)
@@ -43,17 +43,17 @@
 
 (defn part-1
   [& [data]]
-  (let [data (or data (load-data "day-6"))]
+  (let [data (or data (load-data "day-06"))]
     (->> (compute-lights-part-1 data) vals (filter true?) count)))
 
 (defn part-2
   [& [data]]
-  (let [data (or data (load-data "day-6"))]
+  (let [data (or data (load-data "day-06"))]
     (reduce + (vals (compute-lights-part-2 data)))))
 
 (defn image!
   []
-  (let [data (load-data "day-6")
+  (let [data (load-data "day-06")
         lights (compute-lights-part-2 data)
         max-brightness (float (apply max (vals lights)))
         image (BufferedImage. 1000 1000 BufferedImage/TYPE_INT_RGB)]

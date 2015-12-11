@@ -1,9 +1,9 @@
-(ns advent-of-code.day-2
+(ns advent-of-code.day-02
   (:require [advent-of-code.io :refer [load-data]]
             [clojure.string :as str :only split]))
 
 (def present-dimensions-from-file
-  (load-data "day-2"))
+  (load-data "day-02"))
 
 (defn present-surface-area
   [[l w h]]

@@ -1,4 +1,4 @@
-(ns advent-of-code.day-4
+(ns advent-of-code.day-04
   (:require [digest]))
 
 (def default-secret-key "yzbqklnj")

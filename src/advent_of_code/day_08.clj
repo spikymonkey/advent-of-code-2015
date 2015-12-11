@@ -1,4 +1,4 @@
-(ns advent-of-code.day-8
+(ns advent-of-code.day-08
   (:require [advent-of-code.io :refer [load-data]]
             [clojure.string :as str]))
 
@@ -23,11 +23,11 @@
 
 (defn part-1
   [& [data]]
-  (let [data (or data (load-data "day-8"))]
+  (let [data (or data (load-data "day-08"))]
     (- (count (chars-in-code data)) (count (chars-in-memory data)))))
 
 (defn part-2
   [& [data]]
-  (let [data (or data (load-data "day-8"))]
+  (let [data (or data (load-data "day-08"))]
     (- (count (chars-encoded data)) (count (chars-in-code data)))))
 

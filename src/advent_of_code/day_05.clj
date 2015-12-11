@@ -1,9 +1,9 @@
-(ns advent-of-code.day-5
+(ns advent-of-code.day-05
   (:require [advent-of-code.io :refer [load-data]]
             [clojure.string :as str]))
 
 (def default-data
-  (str/split (load-data "day-5") #"\n"))
+  (str/split (load-data "day-05") #"\n"))
 
 (defn nice-part-1?
   [input]

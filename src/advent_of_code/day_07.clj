@@ -1,4 +1,4 @@
-(ns advent-of-code.day-7
+(ns advent-of-code.day-07
   (:require [advent-of-code.io :refer :all]
             [clojure.string :as str]))
 
@@ -33,7 +33,7 @@
 
 (defn wires->values
   [& [data]]
-  (let [data (or data (load-data "day-7"))]
+  (let [data (or data (load-data "day-07"))]
     (binding [*instructions* (parse-instructions data)]
       (reduce (fn [output-map [output _]]
                 (assoc output-map output (wire-value output)))
@@ -42,13 +42,13 @@
 
 (defn part-1
   [& [data]]
-  (let [data (or data (load-data "day-7"))]
+  (let [data (or data (load-data "day-07"))]
     (binding [*instructions* (parse-instructions data)]
       (wire-value :a))))
 
 (defn part-2
   [& [data]]
-  (let [data (or data (load-data "day-7"))]
+  (let [data (or data (load-data "day-07"))]
     (binding
       [*instructions* (assoc-in (parse-instructions data) [:b :inputs] [16076])]
       (wire-value :a))))

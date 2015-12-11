@@ -1,8 +1,8 @@
-(ns advent-of-code.day-3
+(ns advent-of-code.day-03
   (:require [advent-of-code.io :refer :all]))
 
 (def instructions-from-file
-  (load-data "day-3"))
+  (load-data "day-03"))
 
 (defn ->movement
   [instruction]

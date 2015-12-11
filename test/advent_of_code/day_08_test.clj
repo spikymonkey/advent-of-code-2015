@@ -1,10 +1,10 @@
-(ns advent-of-code.day-8-test
+(ns advent-of-code.day-08-test
   (:require [clojure.test :refer :all]
-            [advent-of-code.day-8 :as day-8]))
+            [advent-of-code.day-08 :as day-08]))
 
 (deftest test-chars-in-code
   (are [input expected-chars]
-    (= expected-chars (count (day-8/chars-in-code input)))
+    (= expected-chars (count (day-08/chars-in-code input)))
     "\"\"" 2
     "\"abc\"" 5
     "\"aaa\\\"aaa\"" 10
@@ -18,7 +18,7 @@
 
 (deftest test-chars-in-memory
   (are [input expected-chars]
-    (= expected-chars (day-8/chars-in-memory input))
+    (= expected-chars (day-08/chars-in-memory input))
     "\"\"" ""
     "\"abc\"" "abc"
     "\"aaa\\\"aaa\"" "aaa\"aaa"
@@ -34,21 +34,21 @@
          "\"\\x27\"" \newline) (str "abcaaa\"aaa" (char 0x27))))
 
 (deftest test-part-1
-  (is (= 12 (day-8/part-1 (str "\"\"" \newline
+  (is (= 12 (day-08/part-1 (str "\"\"" \newline
                                "\"abc\"" \newline
                                "\"aaa\\\"aaa\"" \newline
                                "\"\\x27\"" \newline)))))
 
 (deftest test-encode
   (are [input encoded]
-    (= encoded (day-8/chars-encoded input))
+    (= encoded (day-08/chars-encoded input))
     "\"\"", "\"\\\"\\\"\""
     "\"abc\"", "\"\\\"abc\\\"\""
     "\"aaa\\\"aaa\"", "\"\\\"aaa\\\\\\\"aaa\\\"\""
     "\"\\x27\"", "\"\\\"\\\\x27\\\"\""))
 
 (deftest test-part-2
-  (is (= 19 (day-8/part-2 (str "\"\"" \newline
+  (is (= 19 (day-08/part-2 (str "\"\"" \newline
                                "\"abc\"" \newline
                                "\"aaa\\\"aaa\"" \newline
                                "\"\\x27\"" \newline)))))

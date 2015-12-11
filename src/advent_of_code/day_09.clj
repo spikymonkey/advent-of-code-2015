@@ -1,4 +1,4 @@
-(ns advent-of-code.day-9
+(ns advent-of-code.day-09
   (require [advent-of-code.io :refer [load-data]]
            [clojure.string :as str]
            [clojure.math.combinatorics :as combo]))
@@ -23,10 +23,10 @@
 
 (defn part-1
   [& [data]]
-  (let [graph (parse-data (or data (load-data "day-9")))]
+  (let [graph (parse-data (or data (load-data "day-09")))]
     (apply min (route-distances graph))))
 
 (defn part-2
   [& [data]]
-  (let [graph (parse-data (or data (load-data "day-9")))]
+  (let [graph (parse-data (or data (load-data "day-09")))]
     (apply max (route-distances graph))))

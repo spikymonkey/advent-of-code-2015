@@ -1,4 +1,4 @@
-(ns advent-of-code.day-1
+(ns advent-of-code.day-01
   (:require [advent-of-code.io :refer [load-data]]))
 
 (defn- apply-instruction
@@ -7,7 +7,7 @@
     (+ current-floor direction)))
 
 (def instructions-from-file
-  (load-data "day-1"))
+  (load-data "day-01"))
 
 (defn part-1
   [& [instructions]]
