@@ -11,7 +11,7 @@
     "abcdffaa" true
     "ghjaabcc" true))
 
-(deftest test-next-password
+(deftest ^:slow test-next-password
   (are [input expected-next-password]
     (= expected-next-password (first (day-11/valid-passwords input)))
     "abcdefgh" "abcdffaa"
